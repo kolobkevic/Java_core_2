@@ -17,7 +17,7 @@ public class Main {
 
         firstMethod();
         secondMethod();
-        new MultithreadingCounting().secondMethod(2,arr2);
+        new MultithreadingCounting().secondMethod(4,arr2);
 
 
         System.out.println(Arrays.equals(arr, arr1));

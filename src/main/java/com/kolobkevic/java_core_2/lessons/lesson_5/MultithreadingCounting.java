@@ -21,8 +21,11 @@ public class MultithreadingCounting {
                 }
             });
             thr[i].start();
+        }
+
+        for (Thread thread : thr) {
             try {
-                thr[i].join();
+                thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -31,8 +34,6 @@ public class MultithreadingCounting {
         for (int j = 0; j < threadsCount; j++) {
             System.arraycopy(list[j], 0, arr1, j * k, k);
         }
-
         System.out.printf("Elapsed time of second method: %d ms %n", (System.currentTimeMillis() - b));
     }
-
 }
